@@ -4,7 +4,6 @@ import pandas as pd
 from pathlib import Path
 import pydeck as pdk
 
-
 # load the data
 data = pd.read_excel(Path('data/Dataset_code4green.xlsx'))
 
@@ -49,3 +48,5 @@ view_state = pdk.ViewState(
 # Combined all of it and render a viewport
 r = pdk.Deck(layers=[layer], initial_view_state=view_state, width=100)
 st.pydeck_chart(r)
+
+st.image('media/result.jpeg')
