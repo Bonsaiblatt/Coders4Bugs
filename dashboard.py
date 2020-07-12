@@ -50,5 +50,4 @@ r = pdk.Deck(layers=[layer], initial_view_state=view_state, width=100)
 st.pydeck_chart(r)
 
 st.title('Sentinel-2 Image')
-st.image('media/real_RGB_image_cropped.jpg', width=250)
-st.image('media/result_cropped.jpeg')
+st.image('media/result_comparison.jpeg')
