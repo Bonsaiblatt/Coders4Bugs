@@ -19,7 +19,7 @@ st.title('Contamination Explorer')
 # Define the sidebar
 # Define contamination
 st.sidebar.title("Choose contaminant:")
-options = st.sidebar.multiselect("", ['Zinc', 'Lead'])
+options = st.sidebar.multiselect("", ['Zinc', 'Lead'], default=['Lead'])
 
 #Define coordinates
 st.sidebar.title("Choose your coordinates:")
@@ -49,4 +49,6 @@ view_state = pdk.ViewState(
 r = pdk.Deck(layers=[layer], initial_view_state=view_state, width=100)
 st.pydeck_chart(r)
 
-st.image('media/result.jpeg')
+st.title('Sentinel-2 Image')
+st.image('media/real_RGB_image_cropped.jpg', width=250)
+st.image('media/result_cropped.jpeg')
